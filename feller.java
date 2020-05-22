@@ -41,7 +41,7 @@ public class feller {
 
         }
 
-        System.out.println();
+        System.out.println("Тестируем репозиторий");
 
 
 
