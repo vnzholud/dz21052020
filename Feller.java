@@ -5,18 +5,23 @@ import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 public class Feller {
 
     public static void main(String[] args) {
-
+    Integer size = 4;
 
         //Dow dow = new Dow();
         //arr = dow.addArr();
         String[][] arr = Dow.addArr();
 
-        try {
 
+
+
+        try {
+            if (arr.length>size){
+                throw new Exception("Массив больше");
+            }
             arrInfo(arr);
 
         } catch (Exception e) {
-            System.out.println("Вылезла ошибка");
+            System.out.println("Вылезла ошибка: " + e.getMessage());
         }
 
     }
