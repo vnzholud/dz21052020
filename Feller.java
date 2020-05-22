@@ -2,21 +2,21 @@ package dz20052020;
 
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
-public class feller {
-    private static Object dow;
-
+public class Feller {
 
     public static void main(String[] args) {
 
-        String[][] arr = new String[4][4];
 
+        //Dow dow = new Dow();
+        //arr = dow.addArr();
+        String[][] arr = Dow.addArr();
 
         try {
-            arrInfo((String[][]) dow);
-        } catch (Exception e) {
 
-        } finally {
-            System.out.println("Слишком большой массив");
+            arrInfo(arr);
+
+        } catch (Exception e) {
+            System.out.println("Вылезла ошибка");
         }
 
     }
@@ -33,16 +33,14 @@ public class feller {
 
                 sumArr = sumArr + Integer.parseInt(arr[i][j]);
 
-                System.out.print(arr[i][j]+" ");
-
+                System.out.print(arr[i][j] + " ");
 
 
             }
 
         }
 
-        System.out.println("Тестируем репозиторий");
-
+        System.out.println("");
 
 
         System.out.println(sumArr);
